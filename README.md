@@ -6,5 +6,14 @@ React Native learning project.
 - React Native environment setup
 - Android & iOS running successfully
 - Project connected to GitHub
+- SSH setup for personal & office GitHub accounts
+
+## ✅ Day 2
+- Created proper project structure (`src/`, `screens/`, `components/`)
+- Built Product List UI
+- Implemented `FlatList`
+- Created reusable `ProductCard` component
+- Applied basic styling and dark theme
+- Pushed changes to GitHub (daily contribution)
 
 More updates coming daily.
