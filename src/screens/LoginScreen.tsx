@@ -8,14 +8,22 @@ import {
   KeyboardAvoidingView,
   Platform,
 } from 'react-native';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { RootStackParamList } from '../navigation/AppNavigator';
 
-const LoginScreen = () => {
+
+type Props = NativeStackScreenProps<RootStackParamList, 'Login'>;
+
+const LoginScreen = ({ navigation }: Props) => {
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    console.log(email, password);
-  };
+  navigation.replace('MainTabs');
+
+};
+
 
   return (
     <KeyboardAvoidingView

@@ -24,3 +24,17 @@ More updates coming daily.
 - Implemented `useState`
 - Handled keyboard using `KeyboardAvoidingView`
 - Added basic form interaction
+
+
+## ✅ Day 4
+- Implemented stack navigation using React Navigation
+- Created app-level navigator
+- Connected Login screen to Product List screen
+- Enabled header and back navigation
+
+
+## ✅ Day 5
+- Implemented bottom tab navigation
+- Added Home, Products, and Profile tabs
+- Nested tab navigator inside stack navigator
+- Implemented logout flow using navigation replace
