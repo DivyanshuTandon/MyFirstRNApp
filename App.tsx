@@ -1,8 +1,15 @@
 import React from 'react';
-import AppNavigator from './src/navigation/AppNavigator';
+import { AuthProvider } from './src/context/AuthContext';
+import RootNavigator from './src/navigation/RootNavigator';
+import Toast from 'react-native-toast-message';
 
-function App() {
-  return <AppNavigator />;
-}
+const App = () => {
+  return (
+    <AuthProvider>
+      <RootNavigator />
+       <Toast />
+    </AuthProvider>
+  );
+};
 
 export default App;
