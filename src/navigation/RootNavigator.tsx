@@ -1,22 +1,22 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { View, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { useAuth } from '../hooks/useAuth';
 
-import { AuthContext } from '../context/AuthContext';
 import LoginScreen from '../screens/LoginScreen';
 import TabNavigator from './TabNavigator';
 
-export type RootStackParamList = {
-  Login: undefined;
-  MainTabs: undefined;
-};
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
 const RootNavigator = () => {
-  const { isLoggedIn, loading } = useContext(AuthContext);
+  const { isLoggedIn, isBootstrapping } = useAuth();
 
-  if (loading) return null;
+if (isBootstrapping) {
+    // JS is resolving auth state
+    // Native launch screen is already visible
+    return null;
+  }
 
   return (
     <NavigationContainer>

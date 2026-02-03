@@ -1,13 +1,14 @@
 # 📱 MyFirstRNApp
 
-A **React Native learning project** focused on building real-world mobile app architecture using modern best practices.  
-This project is developed incrementally with an emphasis on **clean code, scalable navigation, and production-ready patterns**.
+A **React Native learning project** focused on building **real-world, production-grade mobile app architecture** using modern best practices.
+
+This project is developed incrementally with a strong emphasis on clean code, scalable architecture, native-first patterns, and meaningful GitHub commits.
 
 ---
 
 ## 🚀 Tech Stack
 
-- React Native (CLI / Bare)
+- React Native (CLI / Bare – No Expo)
 - TypeScript
 - React Navigation
   - Native Stack Navigator
@@ -16,13 +17,13 @@ This project is developed incrementally with an emphasis on **clean code, scalab
 - AsyncStorage
 - Phosphor Icons
 - Platform-native Toasts
-- Git & GitHub (daily contributions)
+- Git & GitHub (clean, consistent commits)
 
 ---
 
 ## ✨ Key Features
 
-- Cross-platform app running on **Android and iOS**
+- Cross-platform support for **Android and iOS**
 - Clean and scalable project structure
 - Authentication system using Context API
 - Persistent login using AsyncStorage
@@ -30,47 +31,58 @@ This project is developed incrementally with an emphasis on **clean code, scalab
 - Proper logout handling
 - Auth-driven navigation flow
 - Bottom tab navigation (Home, Products, Profile)
-- Modern UI with icon-based design (Phosphor)
-- Platform-native feedback (Android Toast / iOS bottom toast)
+- Modern UI with consistent iconography (Phosphor)
+- Platform-native feedback
+  - Android: ToastAndroid
+  - iOS: custom bottom toast
 - iOS Safe Area handling (notch & Dynamic Island support)
+- Native splash screen implementation (no JS-based splash screens)
 
 ---
 
 ## 🧠 Architecture Highlights
 
-- Single source of truth for authentication
-- Navigation controlled by auth state (not manual redirects)
-- Clear separation of concerns:
-  - `context/` → global state
-  - `navigation/` → app navigation
+- Single source of truth for authentication state
+- Navigation fully controlled by auth state
+- Clear separation of concerns
+  - `context/` → global state management
+  - `navigation/` → navigation structure
   - `screens/` → UI screens
+  - `hooks/` → reusable logic
 - Designed to be API-ready for real backend integration
 
 ---
 
 ## 🔐 Authentication Flow
 
-- User taps **Login**
-- Auth state updates via Context
-- Login state persisted in AsyncStorage
-- App automatically navigates based on auth state
-- Logout clears storage and resets navigation
+- User initiates login
+- Auth state updates via Context API
+- Session persisted using AsyncStorage
+- App bootstraps silently on launch
+- Navigation renders based on auth state
+- Logout clears persisted data and resets state
 
 ---
 
 ## 🎯 Purpose of This Project
 
 - Learn real-world React Native patterns
-- Practice clean architecture and state management
-- Maintain consistent daily GitHub contributions
-- Build a strong foundation for production-ready apps
+- Practice production-grade architecture
+- Avoid tutorial shortcuts and hacks
+- Maintain consistent, meaningful GitHub contributions
+- Prepare for real backend integration using Node.js
 
 ---
 
 ## 📌 Status
 
-🚧 Actively under development  
-New features and improvements are added regularly.
+🚧 Actively under development
+
+Upcoming work includes:
+- Real Node.js authentication API
+- Token-based authentication
+- Secure API integration
+- Environment-based configuration
 
 ---
 
@@ -83,4 +95,4 @@ React Native / MERN Stack Developer
 
 ## ⭐️ Notes
 
-This project is intentionally built **without Expo** to gain a deeper understanding of native React Native tooling.
+This project intentionally avoids **Expo** to gain deeper experience with native React Native tooling, build systems, and platform-specific behavior.
